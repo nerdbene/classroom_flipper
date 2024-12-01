@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipper - Teacher Tools</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1>🃏 Card Flipper</h1>
+            <a href="https://github.com/nerdbene/classroom_flipper" target="_blank" class="github-btn">
+                <i class="fab fa-github"></i> Source Code
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="author">by Bene - 2024</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="controls">
+            <input type="file" id="imageUpload" accept="image/*" class="file-input">
+            <button id="addCard" class="btn">Add Card</button>
+            <button id="resetCards" class="btn btn-danger">Reset All</button>
+            <div class="settings">
+                <label>
+                    Flip Duration (ms):
+                    <input type="number" id="flipDuration" value="200" min="100" max="1000" step="100">
+                </label>
+                <span class="card-count">Cards: <span id="cardCounter">0</span></span>
+            </div>
+        </div>
+        
+        <div id="cardContainer" class="card-container">
+            <!-- Cards here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
